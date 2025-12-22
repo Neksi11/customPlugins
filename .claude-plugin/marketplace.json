@@ -1,0 +1,29 @@
+{
+  "name": "local-plugins",
+  "owner": {
+    "name": "Local",
+    "email": ""
+  },
+  "metadata": {
+    "description": "Local collection of custom plugins for development",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "solution-architect",
+      "source": "./plugin/solution-architect",
+      "description": "AI-powered solution architect that decodes ideas, explores multiple solution approaches, and generates implementation roadmaps",
+      "version": "1.0.0",
+      "category": "development",
+      "tags": ["architecture", "brainstorming", "planning", "ideation", "solution-design"]
+    },
+    {
+      "name": "skill-writer",
+      "source": "./plugin/skill-writer-plugin",
+      "description": "Plugin for creating well-structured Agent Skills for Claude Code",
+      "version": "1.0.0",
+      "category": "development",
+      "tags": ["skills", "agent", "claude-code", "automation"]
+    }
+  ]
+}

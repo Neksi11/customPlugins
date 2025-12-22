@@ -1,0 +1,10 @@
+{
+  "name": "skill-writer",
+  "version": "1.0.0",
+  "description": "Plugin for creating well-structured Agent Skills for Claude Code",
+  "author": {
+    "name": "Skill Writer Plugin",
+    "email": ""
+  },
+  "keywords": ["skills", "agent", "claude-code", "automation"]
+}

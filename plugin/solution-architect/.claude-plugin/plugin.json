@@ -1,0 +1,11 @@
+{
+  "name": "solution-architect",
+  "version": "1.0.0",
+  "description": "AI-powered solution architect that decodes ideas, explores multiple solution approaches, and generates implementation roadmaps",
+  "author": {
+    "name": "Solution Architect",
+    "email": ""
+  },
+  "keywords": ["architecture", "brainstorming", "planning", "ideation", "solution-design"],
+  "commands": ["./commands/analyze.md", "./commands/brainstorm.md", "./commands/compare.md", "./commands/roadmap.md"]
+}
