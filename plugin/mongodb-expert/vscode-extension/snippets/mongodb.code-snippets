@@ -1,0 +1,110 @@
+{
+  "Find Query": {
+    "prefix": "find",
+    "body": [
+      "db.${1:collection}.find({",
+      "  ${2:field}: ${3:value}",
+      "}, {",
+      "  ${4:projection}: ${5:1}",
+      "})"
+    ],
+    "description": "MongoDB find query"
+  },
+  "Aggregate": {
+    "prefix": "agg",
+    "body": [
+      "db.${1:collection}.aggregate([",
+      "  { $$match: { ${2:field}: ${3:value} } },",
+      "  { $$group: { _id: \"$$${4:field}\", ${5:total}: { $$sum: 1 } } },",
+      "  { $$sort: { ${5:total}: -1 } }",
+      "])"
+    ],
+    "description": "MongoDB aggregation pipeline"
+  },
+  "Insert One": {
+    "prefix": "ins",
+    "body": [
+      "db.${1:collection}.insertOne({",
+      "  ${2:field}: ${3:value},",
+      "})"
+    ],
+    "description": "Insert single document"
+  },
+  "Update One": {
+    "prefix": "upd",
+    "body": [
+      "db.${1:collection}.updateOne(",
+      "  { ${2:filterField}: ${3:filterValue} },",
+      "  { $$set: { ${4:field}: ${5:value} } }",
+      ")"
+    ],
+    "description": "Update single document"
+  },
+  "$gt Operator": {
+    "prefix": "$gt",
+    "body": "{$gt: ${1:value}}",
+    "description": "Greater than operator"
+  },
+  "$gte Operator": {
+    "prefix": "$gte",
+    "body": "{$gte: ${1:value}}",
+    "description": "Greater than or equal operator"
+  },
+  "$lt Operator": {
+    "prefix": "$lt",
+    "body": "{$lt: ${1:value}}",
+    "description": "Less than operator"
+  },
+  "$in Operator": {
+    "prefix": "$in",
+    "body": "{$in: [${1:values}]}",
+    "description": "In array operator"
+  },
+  "$or Operator": {
+    "prefix": "$or",
+    "body": "{$or: [{${1:condition1}}, {${2:condition2}}]}",
+    "description": "OR operator"
+  },
+  "Lookup": {
+    "prefix": "lookup",
+    "body": [
+      "{$lookup: {",
+      "  from: \"${1:collection}\",",
+      "  localField: \"${2:localField}\",",
+      "  foreignField: \"${3:foreignField}\",",
+      "  as: \"${4:outputField}\"",
+      "}}"
+    ],
+    "description": "Join collections with $lookup"
+  },
+  "Unwind": {
+    "prefix": "unwind",
+    "body": "{$unwind: \"$$${1:arrayField}\"}",
+    "description": "Unwind array operator"
+  },
+  "Group": {
+    "prefix": "group",
+    "body": [
+      "{$$group: {",
+      "  _id: \"$$${1:field}\",",
+      "  ${2:alias}: { $$${3:operator}: \"$$${4:field}\" }",
+      "}}"
+    ],
+    "description": "Group aggregation"
+  },
+  "Project": {
+    "prefix": "project",
+    "body": [
+      "{$$project: {",
+      "  ${1:field}: 1,",
+      "  _id: 0",
+      "}}"
+    ],
+    "description": "Project fields"
+  },
+  "Regex": {
+    "prefix": "regex",
+    "body": "{$$regex: \"${1:pattern}\", $$options: \"${2:i}\"}",
+    "description": "Regex query"
+  }
+}

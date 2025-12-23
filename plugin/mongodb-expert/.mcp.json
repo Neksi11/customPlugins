@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "mongodb": {
+      "command": "python",
+      "args": [
+        "C:\\Users\\Neksi\\.claude\\plugins\\cache\\claude-plugins-official\\plugin-dev\\6d3752c000e2/scripts/mongodb-server.py"
+      ],
+      "env": {
+        "MONGO_CONNECTION_URI": "${MONGO_CONNECTION_URI:}",
+        "MONGO_DEFAULT_DATABASE": "${MONGO_DEFAULT_DATABASE:}",
+        "MONGO_TIMEOUT": "${MONGO_TIMEOUT:30000}",
+        "MONGO_DEBUG": "${MONGO_DEBUG:false}"
+      }
+    }
+  }
+}

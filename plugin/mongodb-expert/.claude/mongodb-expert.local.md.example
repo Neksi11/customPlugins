@@ -1,0 +1,40 @@
+---
+# MongoDB Connection Settings
+# Copy this file to mongodb-expert.local.md and configure your settings
+
+connectionUri: mongodb://localhost:27017
+defaultDatabase: myapp
+timeout: 30000
+debugMode: false
+---
+
+# MongoDB Expert Plugin Configuration
+
+This file contains your local MongoDB connection settings. The values in this file
+will be used by the plugin when connecting to your database.
+
+## Configuration Options
+
+### connectionUri
+MongoDB connection string. Examples:
+- Local: mongodb://localhost:27017
+- With auth: mongodb://user:pass@localhost:27017
+- Atlas: mongodb+srv://cluster.example.com/
+- SRV: mongodb+srv://user:pass@cluster.xxxxx.mongodb.net/
+
+### defaultDatabase
+The default database to use when no database is specified.
+
+### timeout
+Connection timeout in milliseconds (default: 30000).
+
+### debugMode
+Enable debug logging (true/false).
+
+## Security Note
+
+This file may contain sensitive credentials. Add it to your .gitignore:
+
+```
+.claude/*.local.md
+```

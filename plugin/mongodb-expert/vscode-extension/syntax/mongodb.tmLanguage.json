@@ -1,0 +1,95 @@
+{
+  "scopeName": "source.mongodb",
+  "patterns": [
+    {
+      "include": "#operators"
+    },
+    {
+      "include": "#methods"
+    },
+    {
+      "include": "#strings"
+    },
+    {
+      "include": "#numbers"
+    },
+    {
+      "include": "#comments"
+    },
+    {
+      "include": "#fields"
+    }
+  ],
+  "repository": {
+    "operators": {
+      "patterns": [
+        {
+          "name": "keyword.operator.mongodb",
+          "match": "\\$(gt|gte|lt|lte|ne|in|nin|and|or|not|nor|exists|type|regex|options|elemMatch|size|all|set|unset|inc|mul|rename|setOnInsert|min|max|currentDate|addToSet|pull|push|each|sort|slice|position|bit|isolated|pop|project|match|lookup|unwind|group|sort|limit|skip|count|facet|bucket|bucketAuto|sample|out|merge|redact|graphLookup|geoNear|search|indexStats)"
+        },
+        {
+          "name": "keyword.operator.comparison.mongodb",
+          "match": ":|,"
+        }
+      ]
+    },
+    "methods": {
+      "patterns": [
+        {
+          "name": "support.function.mongodb",
+          "match": "\\b(find|findOne|findAndModify|insert|insertOne|insertMany|update|updateOne|updateMany|replace|replaceOne|delete|deleteOne|deleteMany|aggregate|count|countDocuments|estimatedDocumentCount|distinct|mapReduce|group|aggregate|watch|changeStream|explain|bulkWrite|createIndex|createIndexes|dropIndex|dropIndexes|indexExists|indexInformation|listIndexes|reIndex|stats|dataSize|storageSize|totalSize|drop|rename|isCapped)\\b"
+        }
+      ]
+    },
+    "fields": {
+      "patterns": [
+        {
+          "name": "variable.other.object.property.mongodb",
+          "match": "\\b[a-zA-Z_$][a-zA-Z0-9_$]*\\s*(?=:)"
+        }
+      ]
+    },
+    "strings": {
+      "patterns": [
+        {
+          "name": "string.quoted.double.mongodb",
+          "begin": "\"",
+          "end": "\"",
+          "patterns": [
+            {
+              "name": "constant.character.escape.mongodb",
+              "match": "\\\\."
+            }
+          ]
+        },
+        {
+          "name": "string.quoted.single.mongodb",
+          "begin": "'",
+          "end": "'",
+          "patterns": [
+            {
+              "name": "constant.character.escape.mongodb",
+              "match": "\\\\."
+            }
+          ]
+        }
+      ]
+    },
+    "numbers": {
+      "patterns": [
+        {
+          "name": "constant.numeric.mongodb",
+          "match": "\\b\\d+(\\.\\d+)?([eE][+-]?\\d+)?\\b"
+        }
+      ]
+    },
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.line.mongodb",
+          "match": "//.*$"
+        }
+      ]
+    }
+  }
+}

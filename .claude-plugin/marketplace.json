@@ -24,6 +24,14 @@
       "version": "1.0.0",
       "category": "development",
       "tags": ["skills", "agent", "claude-code", "automation"]
+    },
+    {
+      "name": "mongodb-expert",
+      "source": "./plugin/mongodb-expert",
+      "description": "Comprehensive MongoDB integration plugin with query operations, aggregations, migrations, and VS Code extension support",
+      "version": "1.0.0",
+      "category": "database",
+      "tags": ["mongodb", "database", "nosql", "query", "aggregation", "migration", "crud", "vscode"]
     }
   ]
 }

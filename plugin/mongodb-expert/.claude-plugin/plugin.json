@@ -1,0 +1,25 @@
+{
+  "name": "mongodb-expert",
+  "version": "1.0.0",
+  "description": "Comprehensive MongoDB integration plugin with query operations, aggregations, migrations, and VS Code extension support",
+  "author": {
+    "name": "MongoDB Expert Plugin"
+  },
+  "homepage": "https://github.com/mongodb-expert/claude-code-plugin",
+  "repository": "https://github.com/mongodb-expert/claude-code-plugin",
+  "license": "MIT",
+  "keywords": [
+    "mongodb",
+    "database",
+    "nosql",
+    "query",
+    "aggregation",
+    "migration",
+    "crud"
+  ],
+  "commands": "./commands",
+  "agents": "./agents",
+  "skills": "./skills",
+  "hooks": "./hooks/hooks.json",
+  "mcpServers": "./.mcp.json"
+}

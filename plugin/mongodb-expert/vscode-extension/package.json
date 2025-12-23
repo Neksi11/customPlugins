@@ -1,0 +1,140 @@
+{
+  "name": "mongodb-expert-vscode",
+  "displayName": "MongoDB Expert",
+  "description": "MongoDB integration with syntax highlighting, autocomplete, and query results panel",
+  "version": "1.0.0",
+  "publisher": "mongodb-expert",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Snippets",
+    "Other"
+  ],
+  "activationEvents": [
+    "onLanguage:mongodb",
+    "onCommand:mongodb.runQuery",
+    "onCommand:mongodb.connect"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "mongodb",
+        "aliases": [
+          "MongoDB",
+          "mongodb",
+          "mongo"
+        ],
+        "extensions": [
+          ".mongo",
+          ".mongodb"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "mongodb",
+        "scopeName": "source.mongodb",
+        "path": "./syntax/mongodb.tmLanguage.json"
+      }
+    ],
+    "commands": [
+      {
+        "command": "mongodb.runQuery",
+        "title": "Run MongoDB Query",
+        "category": "MongoDB"
+      },
+      {
+        "command": "mongodb.connect",
+        "title": "Connect to MongoDB",
+        "category": "MongoDB"
+      },
+      {
+        "command": "mongodb.showCollections",
+        "title": "Show Collections",
+        "category": "MongoDB"
+      },
+      {
+        "command": "mongodb.explainQuery",
+        "title": "Explain Query",
+        "category": "MongoDB"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "mongodb.runQuery",
+        "key": "ctrl+shift+enter",
+        "mac": "cmd+shift+enter",
+        "when": "editorLangId == mongodb"
+      }
+    ],
+    "configuration": {
+      "title": "MongoDB Expert",
+      "properties": {
+        "mongodb.connectionUri": {
+          "type": "string",
+          "default": "mongodb://localhost:27017",
+          "description": "MongoDB connection URI"
+        },
+        "mongodb.defaultDatabase": {
+          "type": "string",
+          "default": "test",
+          "description": "Default database name"
+        },
+        "mongodb.queryTimeout": {
+          "type": "number",
+          "default": 30000,
+          "description": "Query timeout in milliseconds"
+        },
+        "mongodb.maxResults": {
+          "type": "number",
+          "default": 100,
+          "description": "Maximum number of results to display"
+        }
+      }
+    },
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "mongodb-explorer",
+          "title": "MongoDB Explorer",
+          "icon": "resources/mongodb.svg"
+        }
+      ]
+    },
+    "views": {
+      "mongodb-explorer": [
+        {
+          "id": "mongodb.connections",
+          "name": "Connections"
+        },
+        {
+          "id": "mongodb.collections",
+          "name": "Collections"
+        }
+      ]
+    },
+    "snippets": [
+      {
+        "language": "mongodb",
+        "path": "./snippets/mongodb.code-snippets"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.0",
+    "@types/vscode": "^1.80.0",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "mongodb": "^5.7.0"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "PreToolUse": [
+    {
+      "matcher": "bash.*mongo|db\\.",
+      "hooks": [
+        {
+          "type": "prompt",
+          "prompt": "Review this MongoDB operation for potential issues:\n- Check for injection vulnerabilities\n- Verify proper indexing is used\n- Ensure error handling is present\n- Suggest optimizations if applicable"
+        }
+      ]
+    }
+  ],
+  "PostToolUse": [
+    {
+      "matcher": "mongo-connect",
+      "hooks": [
+        {
+          "type": "prompt",
+          "prompt": "After connecting to MongoDB, offer to:\n1. Show available databases\n2. List collections in the current database\n3. Display collection statistics\n4. Verify connection health"
+        }
+      ]
+    }
+  ]
+}
