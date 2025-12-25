@@ -1,0 +1,22 @@
+{
+  "name": "typescript-advanced-types",
+  "version": "1.0.0",
+  "description": "Comprehensive TypeScript advanced types skill with generics, conditional types, mapped types, template literal types, and utility types for building robust, type-safe applications",
+  "author": {
+    "name": "TypeScript Advanced Types Plugin"
+  },
+  "homepage": "https://github.com/typescript-advanced-types/claude-code-plugin",
+  "repository": "https://github.com/typescript-advanced-types/claude-code-plugin",
+  "license": "MIT",
+  "keywords": [
+    "typescript",
+    "types",
+    "generics",
+    "conditional-types",
+    "mapped-types",
+    "template-literal",
+    "utility-types",
+    "type-safety",
+    "advanced-typescript"
+  ]
+}

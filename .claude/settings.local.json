@@ -4,7 +4,9 @@
       "Skill(plugin-dev:plugin-structure)",
       "Bash(mkdir:*)",
       "Skill(plugin-dev:skill-development)",
-      "Skill(plugin-dev:command-development)"
+      "Skill(plugin-dev:command-development)",
+      "Bash(dir:*)",
+      "Bash(findstr /i \"marketplace\")"
     ]
   }
 }

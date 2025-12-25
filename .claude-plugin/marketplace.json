@@ -32,6 +32,14 @@
       "version": "1.0.0",
       "category": "database",
       "tags": ["mongodb", "database", "nosql", "query", "aggregation", "migration", "crud", "vscode"]
+    },
+    {
+      "name": "typescript-advanced-types",
+      "source": "./plugin/typescript-advanced-types",
+      "description": "Comprehensive TypeScript advanced types skill with generics, conditional types, mapped types, template literal types, and utility types for building robust, type-safe applications",
+      "version": "1.0.0",
+      "category": "development",
+      "tags": ["typescript", "types", "generics", "conditional-types", "mapped-types", "template-literal", "utility-types", "type-safety", "advanced-typescript"]
     }
   ]
 }
