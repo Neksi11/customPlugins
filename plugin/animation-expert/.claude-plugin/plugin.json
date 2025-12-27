@@ -1,0 +1,12 @@
+{
+  "name": "animation-expert",
+  "version": "1.0.0",
+  "description": "Expert animation assistance for GSAP and Motion.dev with comprehensive animation patterns, best practices, and creative techniques. Includes MCP server integration for CSS easing functions and spring animations.",
+  "author": {
+    "name": "Local Plugin Marketplace",
+    "email": "plugins@example.com"
+  },
+  "homepage": "https://github.com/anthropics/claude-code-plugins",
+  "keywords": ["animation", "gsap", "motion-dev", "ui", "frontend", "transitions", "css-easing", "spring-physics"],
+  "mcpServers": "./.mcp.json"
+}

@@ -40,6 +40,14 @@
       "version": "1.0.0",
       "category": "development",
       "tags": ["typescript", "types", "generics", "conditional-types", "mapped-types", "template-literal", "utility-types", "type-safety", "advanced-typescript"]
+    },
+    {
+      "name": "animation-expert",
+      "source": "./plugin/animation-expert",
+      "description": "Expert animation assistance for GSAP and Motion.dev with MCP server integration for CSS easing functions, spring physics, bounce animations, and comprehensive animation patterns",
+      "version": "1.0.0",
+      "category": "frontend",
+      "tags": ["animation", "gsap", "motion-dev", "framer-motion", "css", "easing", "spring-physics", "ui", "transitions", "mcp"]
     }
   ]
 }
