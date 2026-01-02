@@ -1,0 +1,18 @@
+{
+  "mcpServers": {
+    "web-scraper": {
+      "command": "uv",
+      "args": [
+        "--directory",
+        "plugin/web-scraper-plugin/mcp-server",
+        "run",
+        "python",
+        "-m",
+        "server"
+      ],
+      "env": {
+        "PYTHONPATH": "plugin/web-scraper-plugin/mcp-server"
+      }
+    }
+  }
+}

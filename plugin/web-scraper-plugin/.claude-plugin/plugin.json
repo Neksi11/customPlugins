@@ -1,0 +1,32 @@
+{
+  "name": "web-scraper-plugin",
+  "version": "1.0.0",
+  "description": "Intelligent web scraping plugin with adaptive HTTP/browser fallback, content extraction, and automation capabilities",
+  "author": "Local Plugin Marketplace",
+  "mcpServers": {
+    "web-scraper": {
+      "command": "uv",
+      "args": [
+        "--directory",
+        "plugin/web-scraper-plugin/mcp-server",
+        "run",
+        "python",
+        "server.py"
+      ],
+      "env": {
+        "PYTHONPATH": "plugin/web-scraper-plugin/mcp-server"
+      }
+    }
+  },
+  "capabilities": [
+    "smart_content_extraction",
+    "javascript_rendering",
+    "form_interaction",
+    "authentication_handling",
+    "batch_scraping",
+    "rate_limiting",
+    "robots_txt_compliance"
+  ],
+  "categories": ["web-scraping", "automation", "data-extraction"],
+  "tags": ["scraper", "web", "extraction", "automation", "playwright", "beautifulsoup", "mcp"]
+}

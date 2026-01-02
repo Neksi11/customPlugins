@@ -7,7 +7,13 @@
       "Skill(plugin-dev:command-development)",
       "Bash(dir:*)",
       "Bash(findstr /i \"marketplace\")",
-      "Bash(findstr:*)"
+      "Bash(findstr:*)",
+      "Skill(animation-expert:analyze-animation)",
+      "mcp__motion__generate-css-spring",
+      "mcp__motion__generate-css-bounce-easing",
+      "Skill(superpowers:brainstorm)",
+      "Skill(brainstorming)",
+      "Bash(ls:*)"
     ]
   }
 }
