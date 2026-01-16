@@ -57,6 +57,14 @@
       "version": "1.0.0",
       "category": "web",
       "tags": ["scraping", "web", "extraction", "automation", "playwright", "beautifulsoup", "content", "mcp", "browser-automation"]
+    },
+    {
+      "name": "system-design",
+      "source": "./plugin/system-design-plugin",
+      "description": "System Design Mastery plugin with three proven approaches (Planned Architecture, Evolutionary Architecture, Comprehensive Curriculum) for designing scalable systems from scratch, plus technology selection guidance and specialized agents",
+      "version": "1.0.0",
+      "category": "development",
+      "tags": ["system-design", "architecture", "scalability", "api-design", "database", "load-balancing", "microservices", "distributed-systems", "capacity-planning", "interview-prep"]
     }
   ]
 }
